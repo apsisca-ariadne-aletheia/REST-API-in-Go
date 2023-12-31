@@ -1,0 +1,18 @@
+Sure, here is the code for a simple REST API in Go:
+
+package main
+
+import (
+    "fmt"
+    "net/http"
+)
+
+func main() {
+    http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hello World!")
+    })
+
+    http.ListenAndServe(":8080", nil)
+}
+
+This code will create a simple HTTP server that listens on port 8080. When a client makes a request to the   /hello   endpoint, the server will respond with the text   Hello World!  .
